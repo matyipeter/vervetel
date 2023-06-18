@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Vérvétel</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="{% static 'main/css/master.css' %}">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- JS -->
+    <script src="{% static 'main/js/backtotop.js' %}" defer></script>
+  </head>
+  <body> 
+
+    <section class="navigation w3-metro-light-blue w3-container">
+      <button onclick="goToTop()" id="back-to-top" title="Go to top"><i class="fa fa-toggle-up"></i></button>
+      <nav class="nav-container">
+        <div class="logo w3-padding-large"> 
+          <p>Nagykovácsi vérvétel</p>
+        </div>
+        <div class="mobile-button">
+          <span style="float: right;" onclick="toggleMobileNavigation()">&#9776;</span>
+        </div>
+        <div class="links">
+          <a href="#about" >RÓLUNK</a>-
+          <a href="#consulting" >INFORMÁCIÓ</a>-
+          <a href="#contact" >KAPCSOLATFELVÉTEL</a>            
+        </div>
+        <div id="mobile-sidenav" class="mobile-links w3-sand">
+          <a href="javascript:void(0)" class="closebtn w3-round" onclick="toggleMobileNavigation()">&times;</a>
+          <a href="#about" onclick="toggleMobileNavigation()">RÓLUNK</a>
+          <a href="#consulting" onclick="toggleMobileNavigation()">INFORMÁCIÓ</a>
+          <a href="#contact" onclick="toggleMobileNavigation()">KAPCSOLATFELVÉTEL</a>
+        </div>
+      </nav>
+    </section>
+
+    <section class="hero w3-padding-large w3-container">
+      <h1 style="display: inline;"><span><i class="fa fa-check-square-o"></i></span>Foglalj időpontot!</h1>
+      <p>Amíg még nem késő</p>
+      <a href="#contact" class="w3-padding-large w3-round">Időpont foglalás</a>
+    </section>
+
+    <section class="about w3-padding-large w3-container" id="about">
+      <div class="content container w3-round-large">
+        <h2 style="text-align: center;">- Our Mission -</h2>
+        <p style="text-align: center;">To steer your idea in the right direction.</p>
+        <h3 style="text-align: center;">- About -</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
+    <section id="consulting" class="w3-container container consulting content">
+      <h2 style="text-align: center;">Legnépszerűbb vizsgálatok</h2>
+      <div class="c-card w3-margin-top">
+        <p>We offer advices on how to successfully develop and adapt your business ideas</p>
+      </div>
+      <div class="c-card c-card-right w3-margin-top">
+        <p>We implement strategies to identify business risks</p>
+      </div>
+      <div class="c-card w3-margin-top">        
+        <p>We recommend necessary steps to lower, or even completely remove business risks</p>
+      </div>
+      <div class="c-card  c-card-right w3-margin-top">
+        <p>We bring out-of-the-box ideas to refresh a business</p>
+      </div>
+      <div class="c-card w3-margin-top">
+        <p>We conduct analysis to reduce your financial costs</p>
+      </div>
+      <div class="c-card  c-card-right w3-margin-top">
+        <p>We provide you with a roadmap after we conduct business </p>
+      </div>
+    </section>
+
+    <section class="w3-panel w3-container content why-us" style="padding: 50px;">
+      <h2 style="text-align: center;">- Why choose us? -</h2>
+      <div class="container boxes">
+        <div class="box w3-round-large">
+          More than 15 years of experience
+        </div>
+        <div class="box w3-round-large">
+          Over 20000 of consultations
+        </div>
+        <div class="box w3-round-large">
+          Over 3500 happy clients
+        </div>
+        <div class="box w3-round-large">
+          100% secure
+        </div>
+        <div class="box w3-round-large" style="background-color: rgb(153, 255, 187);">
+          Won 75 business awards
+        </div>
+      </div>
+    </section>
+
+    <section class="contact w3-container contact" id="contact">
+      <div class="short-contact">
+        <h2>Elérhetőségek</h2>
+        <div class="w3-large contact-info">
+          <i class="fa fa-address-card"></i><span style="margin-left:10px;"><a href="https://www.google.com/maps/place/@40.6976637,-74.119762,11z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728" target="_blank">Kenedy Street, NY, USA</a></span><br>
+          <i class="fa fa-envelope"></i><span style="margin-left:10px;"><a href="martonedina14@gmail.com">martonedina14@gmail.com</a></span><br>
+          <i class="fa fa-phone-square"></i><span style="margin-left:10px;"><a href="+36 703250310">+36 70 325 0310</a></span><br>
+        </div>
+        <h3 class="w3-margin-top">Elérhető vagyok a Facebookon is!</h3>
+        <div class="w3-large contact-info">
+          <i class="fa fa-facebook-square"></i><span style="margin-left:10px;"><a href="#" target="_blank" style="text-decoration: none;">- Facebook</a></span><br>
+        </div>
+      </div>
+      <div class="form w3-margin-top">
+        <div class="container w3-round-xlarge">
+          <form class="w3-highway-blue w3-padding-large w3-round-large" method='POST'>
+            {% csrf_token %}
+            <h3 style="text-align: center;"><i class="fa fa-check-square-o" style="font-size: 15px;"></i>Időpont foglalás</h3>
+            <label for="fname">Családnév</label>
+            {{ form.first_name }}
+            <label for="lname">Keresztnév</label>
+            {{ form.last_name }}
+            <label for="email">Email</label><br>
+            {{ form.email }}
+            <label for="phone_num">Telefonszám</label><br>
+            {{ form.phone_num }}<br>
+
+            <label for="lname">Hónap</label><br>
+            <select name="dateselect" id="dateselect">
+              {% for date in dates %}
+                <option value="{{ date }}">
+                  {{ date }}. hó
+                </option>
+              {% endfor %}
+            </select>
+
+            <label for="lname">Nap</label><br>
+            <select name="dayselect" id="dayselect">
+              {% for day in days %}
+                <option value="{{ day }}">
+                  {{ day }}
+                </option>
+              {% endfor %}
+            </select>
+
+            <label for="lname">Időpont</label><br>
+            <select name="appselect" id="appselect">
+              {% for a in app %}
+                <option value="{{ a }}">
+                  {{ a.hour }}:{% if a.minute == 0 %}{{ a.minute }}0 {% else %}{{ a.minute }}{% endif %}
+                </option>
+              {% endfor %}
+            </select><br><br>
+            <label for="vizsgalat">Vizsgálat</label>
+            <p class='megjegyzes'>(Írja le saját szavaival)</p>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+            <p>By submiting this form, you agree to our <a href="#" target="_blank">privacy policy</a></p><br>
+            <input class="w3-round-large" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="w3-container footer">
+      <p class="w3-center logo">© 2022 - CONSULTCORP - All rights reserved</p>
+    </section>
+  </body>
+</html>
